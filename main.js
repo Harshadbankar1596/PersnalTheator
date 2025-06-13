@@ -34,6 +34,10 @@ app.get("/move",(req,res)=>{
     res.sendFile("./public/move.html", { root: __dirname })
 })
 
+app.get("/sign",(req,res)=>{
+    res.sendFile("./public/sign.html", { root: __dirname })
+})
+
 app.listen(port , ()=>{
     console.log("app runing in port",port)
 }) 

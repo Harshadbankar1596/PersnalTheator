@@ -1,0 +1,26 @@
+/* Profile Button Style */
+.profile-btn {
+  width:200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profile-name {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
