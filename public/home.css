@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+root {
+    -bg: rgba(0, 0, 0, 0.050);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+/* main nav */
+.mainnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* logo section */
+.logo #showlogo {
+    width: 40px;
+    height: 40px;
+}
+
+/* search section */
+.search {
+    width: 70%;
+    display: inline-block;
+  position: relative;
+}
+#movesearch {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 15px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.179);
+    cursor: pointer;
+}
+
+#movesearch:focus {
+    border: none;
+}
+.search button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 100%;
+  width: 70px;
+  /* padding: 10px; */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* signin section */
+.login {
+    align-items: center;
+    text-align: center;
+}
+
+#signbtn {
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.668);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#signbtn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+
+/* menu section */
+#menu {
+    width: 50px;
+    height: auto;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+}
+
+
+/* main nav section end............... */
+
+/* main start \\\\\\\\\\\\\\\\\\\\\ */
+
+main {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* subnas   section*/
+.subnav {
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+}
+
+.allshow {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.allshow:hover {
+    transform: scale(1.1);
+    font-weight: bolder;
+}
+
+/* image slider */
+.slider-container {
+    background-color: rgba(0, 0, 0, 0.025);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: none;
+    padding: 20px;
+}
+
+.slider-track {
+    display: flex;
+    width: auto;
+    /* 3 images, adjust based on your number of images */
+    animation: slide 10s infinite;
+    gap: 5px;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* move section \\\\\\\\ */
+
+.movessection {
+    /* border: 2px solid black; */
+    background-color: rgba(0, 0, 0, 0.025);
+    height: 30em;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.moveheading {
+    font-size: 1.5em;
+    padding: 20px;
+    line-height: 0px;
+    background-color: rgba(0, 0, 0, 0.025);
+    color: rgba(0, 0, 0, 0.800);
+}
+
+.movebox {
+    /* border: 2px solid purple; */
+    flex: 0 0 250px;
+    height: 400px;
+    margin: auto 0;
+    border-radius: 10px;
+    width: 250px;
+
+}
+
+a{
+    text-decoration: none;
+}
+.moveboxrate {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.moveboximg {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+}
+
+.rateing {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    /* border-radius: 5px; */
+}
+
+.movename {
+    width: 100%;
+    max-height: 10%;
+    display: flex;
+    overflow: hidden;
+    padding: 5px;
+    color: black;
+}
+
+.movenamep {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* media section */
+@media (max-width: 768px) {
+    .login {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .subnav {
+        display: none;
+    }
+}
+
+
+/* loader */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

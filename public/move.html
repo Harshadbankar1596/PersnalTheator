@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<style>
+    .moveinfobox {
+        position: relative;
+        /* ✅ Important fix */
+        background-image: url("./components/m5.avif");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 100% 300%;
+        box-shadow: inset 20em 0px 10000px black;
+        /* Optional effect */
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        /* border: 5px solid green; */
+        z-index: 0;
+        /* Ensure it's below pseudo-elements if needed */
+    }
+
+    .moveinfobox::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* ✅ Change to full coverage if needed */
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    /* Content inside stays visible */
+    .moveinfobox>* {
+        position: relative;
+        z-index: 2;
+        /* Keeps children above the overlay */
+    }
+
+
+    .moveposter {
+        /* border: 2px solid red; */
+        border-radius: 20px;
+        width: 300px;
+        height: 25em;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .moveposter img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .moveinfo {
+        /* border: 2px solid green; */
+        width: 60%;
+        height: 25em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        /* align-items:last baseline; */
+        justify-content: center;
+        z-index: 2;
+        gap: 20px;
+    }
+
+    #movename {
+        font-size: 50px;
+    }
+
+    #ratebox {
+        border: none;
+        padding: 20px;
+        background-color: rgba(49, 44, 44, 0.877);
+        width: 50%;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #movelang {
+        width: 100px;
+        padding: 5px;
+        background-color: white;
+        border-radius: 5px;
+        text-align: center;
+        color: black;
+    }
+
+    #aboutsection {
+        font-size: 20px;
+    }
+
+    .booktiket {
+        width: 200px;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        border: none;
+        background-color: rgb(219, 70, 70);
+    }
+
+    @media (max-width: 768px) {
+        .moveinfobox {
+            flex-direction: column;
+
+        }
+
+        .moveinfo {
+            width: 80%;
+            height: 30em;
+        }
+
+        #ratebox {
+
+            width: 100%;
+
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="mainnav">
+            <div class="logo">
+                <img src="./components/film-movies-icon.png" alt="logo" id="showlogo">
+            </div>
+            <form action="/search" method="get" class="search">
+                <input type="text" placeholder="search for moves , events , sports and activity" id="movesearch"
+                    name="search">
+                <button id="btn" type="submit">Go</button>
+            </form>
+            <div class="login">
+                <button id="signbtn">Sign in</button>
+            </div>
+            <div class="menu">
+                <button id="menu">| | |</button>
+            </div>
+        </div>
+    </nav>
+    <div id="loader" class="loader-container">
+        <div class="spinner"></div>
+    </div>
+    <main>
+        <div class="subnav">
+            <a href="/move" class="allshow">Move</a>
+            <a href="/stream" class="allshow">Stream</a>
+            <a href="/events" class="allshow">Events</a>
+            <a href="/plays" class="allshow">Plays</a>
+            <a href="/sports" class="allshow">Sports</a>
+            <a href="/activites" class="allshow">Activites</a>
+            <a href="/listyourshow" class="allshow">Listyourshow</a>
+            <a href="/corporats" class="allshow">Corporats</a>
+            <a href="/offers" class="allshow">Offers</a>
+            <a href="/giftcard" class="allshow">Gift Card</a>
+        </div>
+        <div class="moveinfobox">
+            <div class="moveposter">
+                <img src="" alt="img" id="moveposter">
+            </div>
+            <div class="moveinfo">
+                <h2 id="movename"></h2>
+                <p id="ratebox"></p>
+                <p id="aboutsection"></p>
+                <button class="booktiket">Book Now</button>
+            </div>
+        </div>
+    </main>
+    <script src="moves.js"></script>
+</body>
+
+</html>

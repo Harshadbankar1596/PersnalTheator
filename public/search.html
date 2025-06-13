@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<style>
+    .moves {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: space-evenly;
+    }
+    .movenamep{
+        text-decoration: none;
+        color: black;
+    }
+    a{
+        text-decoration: none;
+        
+    }
+    .movebox{
+        width: 250px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="mainnav">
+            <div class="logo">
+                <img src="./components/film-movies-icon.png" alt="logo" id="showlogo">
+            </div>
+            <form action="/search" method="get" class="search">
+                <input type="text" placeholder="search for moves , events , sports and activity" id="movesearch"
+                    name="search">
+                <button id="btn" type="submit">Go</button>
+            </form>
+            <div class="login">
+                <button id="signbtn">Sign in</button>
+            </div>
+            <div class="menu">
+                <button id="menu">| | |</button>
+            </div>
+        </div>
+    </nav>
+    <div id="loader" class="loader-container">
+        <div class="spinner"></div>
+    </div>
+    <main style="background-color: rgba(0, 0, 0, 0.075);">
+        <div class="subnav">
+            <a href="/move" class="allshow">Move</a>
+            <a href="/stream" class="allshow">Stream</a>
+            <a href="/events" class="allshow">Events</a>
+            <a href="/plays" class="allshow">Plays</a>
+            <a href="/sports" class="allshow">Sports</a>
+            <a href="/activites" class="allshow">Activites</a>
+            <a href="/listyourshow" class="allshow">Listyourshow</a>
+            <a href="/corporats" class="allshow">Corporats</a>
+            <a href="/offers" class="allshow">Offers</a>
+            <a href="/giftcard" class="allshow">Gift Card</a>
+        </div>
+        <div class="moves">
+            <!-- <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m1.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Bhul Chuk Maaf</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <script src="search.js"></script>
+</body>
+
+</html>

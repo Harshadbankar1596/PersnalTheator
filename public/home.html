@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book MyShow</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <nav>
+        <div class="mainnav">
+            <div class="logo">
+                <img src="./components/film-movies-icon.png" alt="logo" id="showlogo">
+            </div>
+            <form action="/search" method="get" class="search">
+                <input type="text" placeholder="search for moves , events , sports and activity" id="movesearch"
+                    name="search">
+                <button id="btn" type="submit">Go</button>
+            </form>
+            <div class="login">
+                <button id="signbtn">Sign in</button>
+            </div>
+            <div class="menu">
+                <button id="menu">| | |</button>
+            </div>
+        </div>
+
+
+    </nav>
+    <main>
+        <!-- sub nav -->
+        <div class="subnav">
+            <a href="/move" class="allshow">Move</a>
+            <a href="/stream" class="allshow">Stream</a>
+            <a href="/events" class="allshow">Events</a>
+            <a href="/plays" class="allshow">Plays</a>
+            <a href="/sports" class="allshow">Sports</a>
+            <a href="/activites" class="allshow">Activites</a>
+            <a href="/listyourshow" class="allshow">Listyourshow</a>
+            <a href="/corporats" class="allshow">Corporats</a>
+            <a href="/offers" class="allshow">Offers</a>
+            <a href="/giftcard" class="allshow">Gift Card</a>
+        </div>
+        <!-- image slider -->
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide"><img src="./components/o1.avif" alt="Image 1" /></div>
+                <div class="slide"><img src="./components/o2.avif" alt="Image 2" /></div>
+                <div class="slide"><img src="./components/o3.avif" alt="Image 3" /></div>
+            </div>
+        </div>
+        <!-- moves section -->
+
+        <h1 class="moveheading">Recommended Move</h1>
+        <div class="movessection">
+            <!-- <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m1.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Bhul Chuk Maaf</p>
+                </div>
+            </div>
+            <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m2.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Mission : imposible</p>
+                </div>
+            </div>
+            <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m3.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Aata Thambaycha Naay</p>
+                </div>
+            </div>
+            <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m4.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Final Destination</p>
+                </div>
+            </div>
+            <div class="movebox">
+                <div class="moveboxrate">
+                    <img src="./components/m5.avif" alt="" class="moveboximg">
+                    <p class="rateing">⭐⭐⭐⭐⭐9.9/10 👍45K</p>
+                </div>
+                <div class="movename">
+                    <p class="movenamep">Karate Kid Legend</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <script src="home.js"></script>
+</body>
+
+</html>
